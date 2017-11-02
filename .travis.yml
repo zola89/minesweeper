@@ -1,0 +1,14 @@
+language: java
+
+java:
+    - oraclejdk8
+    - oraclejdk7
+    - openjdk7
+
+script:
+  - jdk_switcher use oraclejdk8
+  - javac src/minesweeper/*.java
+  - jdk_switcher use oraclejdk7
+  - javac src/minesweeper/*.java
+  - jdk_switcher use openjdk7
+  - javac src/minesweeper/*.java
